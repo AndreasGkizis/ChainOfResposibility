@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChainOfResponsibilityExample
+namespace ChainOfResponsibilityExample.Common
 {
     internal class AbstractHandler : IHandler
     {
@@ -13,7 +13,7 @@ namespace ChainOfResponsibilityExample
         public IHandler SetNext(IHandler nextHandler)
         {
             // needed to chain handlers 
-            this._nextHandler = nextHandler;
+            _nextHandler = nextHandler;
             return nextHandler;
         }
 
@@ -29,9 +29,9 @@ namespace ChainOfResponsibilityExample
         // this is Virtual to allow it to be overridden by children classes 
         public virtual object Handle(object request, int StringLength)
         {
-            if (this._nextHandler != null)
+            if (_nextHandler != null)
             {
-                return this._nextHandler.Handle(request, StringLength);
+                return _nextHandler.Handle(request, StringLength);
             }
             else
             {

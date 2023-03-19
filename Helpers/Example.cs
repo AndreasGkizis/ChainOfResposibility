@@ -1,4 +1,5 @@
-﻿using ChainOfResponsibilityExample.Handlers;
+﻿using ChainOfResponsibilityExample.Common;
+using ChainOfResponsibilityExample.Handlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
