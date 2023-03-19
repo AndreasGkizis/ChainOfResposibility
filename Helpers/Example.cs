@@ -16,12 +16,12 @@ namespace ChainOfResponsibilityExample.Helpers
         internal static List<string> MakeList()
         {
             List<string> List = new List<string>();
-            List.Add(new string(string.Empty));
             List.Add(new string('a', 1));
             List.Add(new string('b', 15));
             List.Add(new string('c', 150));
             List.Add(new string('d', 1500));
             List.Add(new string('e', 15000));
+            List.Add(new string(string.Empty));
 
             return List;
         }
